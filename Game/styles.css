@@ -1,0 +1,113 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #000000;
+  margin: 0;
+}
+
+#game {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  background: #cecbcc9d;
+  border-radius: 10px;
+}
+
+#tower {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.floor {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.box {
+  width: 120px;
+  height: 50px;
+  background: #ddd;
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*  */
+
+#message-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #333;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#message-box.hidden {
+  display: none;
+}
+
+#message-box p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#close-message {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#close-message:hover {
+  background-color: #0056b3;
+}
+
+/*  */
+
+.box:hover {
+  background: #ccc;
+}
+
+.box.revealed {
+  cursor: default;
+}
+
+.box.gem {
+  background: #4caf50;
+}
+
+.box.bomb {
+  background: #f44336;
+}
+
+.active-floor {
+  border: 2px solid #000;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
